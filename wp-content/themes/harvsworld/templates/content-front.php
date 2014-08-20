@@ -1,6 +1,6 @@
 <!-- Carousel
 ================================================== -->
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
+<div id="homeCarousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -41,16 +41,16 @@
 </div><!-- /.carousel -->
 
 <div class="container marketing">
-  <!-- Three columns of text below the carousel -->
-  <div class="row">
-    <div class="col-md-4">
-      <p>one</p>
-    </div>
-    <div class="col-md-4">
-      <p>two</p>
-    </div>
-    <div class="col-md-4">
-      <p>three</p>
-    </div>
-  </div><!-- .row -->
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Coding &amp; Development</h2>
+        </div>
+        <div class="col-md-6">
+            <h2>Quick Hits</h2>
+        </div>
+        <div class="col-md-12">
+            <h2>Latest</h2>
+        </div>
+    </div><!-- .row -->
 </div><!-- .container -->
