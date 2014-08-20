@@ -20,3 +20,15 @@ function roots_wp_title($title) {
   return $title;
 }
 add_filter('wp_title', 'roots_wp_title', 10);
+
+function hw_latest_posts($args = array()) {
+    $args = array_merge(
+        [
+            'posts_per_page' => 7,
+            'order' => 'DESC',
+            'orderby' => 'date'
+        ],
+        $args
+    );
+    return new WP_Query( $args );
+}
