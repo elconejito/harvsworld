@@ -11,10 +11,14 @@
     <div class="carousel-inner">
         <?php
         $slideClass = 'item active';
-        if ( $latestPosts->have_posts() ) : while ( $latestPosts->have_posts() ) : $latestPosts->the_post();
+        $count = 0;
+        if ( $latestPosts->have_posts() ) : while ( $latestPosts->have_posts() && $count < 3 ) : 
+            $latestPosts->the_post();
+            $do_not_duplicate[] = $post->ID;
         ?>
         <div class="<?php _e($slideClass); ?>">
             <div class="container">
+                <?php if ( has_post_thumbnail() ) the_post_thumbnail( 'large' ); ?>
                 <div class="carousel-caption">
                     <h1><?php the_title(); ?></h1>
                     <?php the_excerpt(); ?>
@@ -24,6 +28,7 @@
         </div>
         <?php
             $slideClass = 'item';
+            $count++;
         endwhile; else:
         ?>
         <div class="<?php _e($slideClass); ?>">
