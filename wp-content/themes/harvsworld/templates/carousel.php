@@ -12,23 +12,20 @@
         <?php
         $slideClass = 'item active';
         $count = 0;
-        if ( $latestPosts->have_posts() ) : while ( $latestPosts->have_posts() && $count < 3 ) : 
-            $latestPosts->the_post();
-            $do_not_duplicate[] = $post->ID;
+        if ( $frontPagePosts['featured']->have_posts() ) : while ( $frontPagePosts['featured']->have_posts() ) :
+            $frontPagePosts['featured']->the_post();
         ?>
         <div class="<?php _e($slideClass); ?>">
             <div class="container">
-                <?php if ( has_post_thumbnail() ) the_post_thumbnail( 'large' ); ?>
+                <?php if ( has_post_thumbnail() ) the_post_thumbnail( 'carousel' ); ?>
                 <div class="carousel-caption">
-                    <h1><?php the_title(); ?></h1>
-                    <?php the_excerpt(); ?>
-                    <p><a class="btn btn-lg btn-primary" href="<?php the_permalink(); ?>" role="button">Read More</a></p>
+                    <h3><?php the_title(); ?></h3>
+                    <p><a class="btn btn-primary" href="<?php the_permalink(); ?>" role="button">Read More</a></p>
                 </div>
             </div>
         </div>
         <?php
             $slideClass = 'item';
-            $count++;
         endwhile; else:
         ?>
         <div class="<?php _e($slideClass); ?>">

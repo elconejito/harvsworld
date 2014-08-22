@@ -7,7 +7,13 @@ add_theme_support('soil-relative-urls');    // Enable relative URLs from Soil
 add_theme_support('soil-nice-search');      // Enable /?s= to /search/ redirect from Soil
 add_theme_support('bootstrap-gallery');     // Enable Bootstrap's thumbnails component on [gallery]
 // add_theme_support('jquery-cdn');            // Enable to load jQuery from the Google CDN
-add_theme_support( 'post-thumbnails' );
+
+/**
+ * Add image sizes I need. The 'false' means it will be cropped
+ * explanation of cropping: http://www.davidtan.org/wordpress-hard-crop-vs-soft-crop-difference-comparison-example/
+ */
+add_image_size( 'carousel', 1170, 500, true );
+add_image_size( 'featured', 550, 180, true );
 
 /**
  * Configuration values
