@@ -132,3 +132,12 @@ function hw_get_post_categories( $args = array() ) {
 
     return '<span class="categories">' . $args['before'] . $cats . $args['after'] . '</span>';
 }
+
+/**
+ * Init my Widgets
+ */
+function hw_init_widgets() {
+    register_widget( 'Category_Widget' );
+    register_widget( 'Recents_Widget' );
+}
+add_action( 'widgets_init', 'hw_init_widgets');
