@@ -1,5 +1,25 @@
+.hentry {
+    margin-bottom: 60px;
+}
 .hentry header { }
 .hentry time { }
 .hentry .byline { }
+.hentry .entry-title {
+    margin-bottom: 0;
+}
 .hentry .entry-content { }
-.hentry footer { }
+
+.hentry footer,
+.entry-footer {
+  background-color: #fff;
+  color: @gray-light;
+  border-top: 4px solid @gray-lighter;
+  margin-top: 5px;
+  padding-top: 10px;
+  font-size: @font-size-small;
+}
+
+.hentry footer span,
+.entry-footer span {
+  display: block;
+}

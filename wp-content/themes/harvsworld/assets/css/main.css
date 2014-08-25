@@ -6266,20 +6266,12 @@ figure.alignnone {
     width: 33.33333333%;
   }
 }
-footer {
+.content-info {
+  margin-top: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   background-color: #2f455b;
   color: #eeeeee;
-}
-footer.entry-footer {
-  background-color: #fff;
-  color: #777777;
-  border-top: 4px solid #eeeeee;
-  margin-top: 5px;
-  padding-top: 10px;
-  font-size: 14px;
-}
-footer.entry-footer span {
-  display: block;
 }
 footer h1,
 footer h2,
@@ -6349,5 +6341,24 @@ footer h6 {
 }
 .home .row.posts-row {
   margin-bottom: 40px;
+}
+.hentry {
+  margin-bottom: 60px;
+}
+.hentry .entry-title {
+  margin-bottom: 0;
+}
+.hentry footer,
+.entry-footer {
+  background-color: #fff;
+  color: #777777;
+  border-top: 4px solid #eeeeee;
+  margin-top: 5px;
+  padding-top: 10px;
+  font-size: 14px;
+}
+.hentry footer span,
+.entry-footer span {
+  display: block;
 }
 /*# sourceMappingURL=main.css.map */
