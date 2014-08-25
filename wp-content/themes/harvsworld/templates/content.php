@@ -14,4 +14,8 @@
       <?php the_excerpt(); ?>
     </div>
   </div>
+  <footer class="entry-footer">
+    <?php _e( hw_get_post_categories() ); ?>
+    <?php _e( hw_get_post_tags() ); ?>
+  </footer>
 </article>
