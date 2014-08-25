@@ -6,7 +6,7 @@
   <div class="row">
     <?php if ( '' != get_the_post_thumbnail() ) : $summaryColClass = 'col-md-9'; ?>
     <div class="col-md-3">
-      <?php the_post_thumbnail( 'thumbnail', [ 'class' => 'img-responsive'] ); ?>
+      <?php the_post_thumbnail( 'thumbnail', [ 'class' => 'img-responsive featured'] ); ?>
     </div>
   
     <?php else : $summaryColClass = 'col-md-12'; endif; ?>
