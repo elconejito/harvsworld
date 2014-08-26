@@ -1,7 +1,7 @@
 <div class="container">
     <!-- Three columns of text below the carousel -->
     <div class="row posts-row">
-        <article class="col-md-4">
+        <article class="col-md-4 hentry">
             <div class="page-header">
                 <h2>Coding &amp; Dev
                     <br /><small>more in <a href="<?php echo esc_url( get_category_link( get_cat_ID('coding') ) ); ?>" title="Coding Category">Coding</a></small></h2>
@@ -21,7 +21,7 @@
                 </footer>
             <?php endif; ?>
         </article>
-        <article class="col-md-4">
+        <article class="col-md-4 hentry">
             <div class="page-header">
                 <h2>Quick Hits
                     <br /><small>more in <a href="<?php echo esc_url( get_category_link( get_cat_ID('quick-hits') ) ); ?>" title="Quick HitsCategory">Quick Hits</a></small></h2>
@@ -54,7 +54,7 @@
                 foreach ( array_chunk($frontPagePosts['latest']->get_posts(), 2) as $row ) : ?>
             <div class="row posts-row">
                 <?php foreach ( $row as $post ) : setup_postdata( $post ); ?>
-                    <article class="col-md-6">
+                    <article class="col-md-6 hentry">
                         <header class="entry-header">
                             <h3 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                             <?php get_template_part('templates/entry-meta'); ?>

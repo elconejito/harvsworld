@@ -6361,6 +6361,10 @@ figure.alignnone {
 .hentry {
   margin-bottom: 60px;
 }
+.hentry header {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eeeeee;
+}
 .hentry .entry-title {
   margin-bottom: 0;
 }
