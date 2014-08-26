@@ -6266,6 +6266,17 @@ figure.alignnone {
     width: 33.33333333%;
   }
 }
+.widget .list-group-item {
+  border-top: none;
+  border-right: none;
+  border-left: 4px solid #fff;
+  border-bottom: 1px solid #eeeeee;
+  border-radius: 0;
+  margin-bottom: 0;
+}
+.widget .list-group-item:hover {
+  border-left: 4px solid #f07a2d;
+}
 .content-info {
   margin-top: 40px;
   padding-top: 20px;
@@ -6273,13 +6284,18 @@ figure.alignnone {
   background-color: #2f455b;
   color: #eeeeee;
 }
-footer h1,
-footer h2,
-footer h3,
-footer h4,
-footer h5,
-footer h6 {
-  color: #f07a2d;
+.content-info h1,
+.content-info h2,
+.content-info h3,
+.content-info h4,
+.content-info h5,
+.content-info h6 {
+  color: #fff;
+}
+.content-info .widget .list-group-item {
+  background-color: #2f455b;
+  border-left: 4px solid #2f455b;
+  border-bottom: 1px solid #777777;
 }
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */

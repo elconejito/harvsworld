@@ -41,14 +41,7 @@
                 </footer>
             <?php endif; ?>
         </article>
-        <div class="col-md-4">
-            <!-- Twitter -->
-            <div class="page-header">
-                <h2>Tweets</h2>
-            </div>
-            <!--<a class="twitter-timeline" href="https://twitter.com/harveyramos" data-widget-id="265274759128940544" data-chrome="nofooter">Tweets by @harveyramos</a>
-            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>-->
-        </div>
+        <?php dynamic_sidebar('sidebar-front'); ?>
     </div><!-- /.row -->
     <div class="row">
         <div class="col-md-12">

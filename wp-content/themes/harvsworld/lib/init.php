@@ -44,11 +44,18 @@ function roots_widgets_init() {
     'before_title'  => '<h3>',
     'after_title'   => '</h3>',
   ));
-
+  register_sidebar(array(
+    'name'          => __('Front Page', 'roots'),
+    'id'            => 'sidebar-front',
+    'before_widget' => '<article class="col-md-4 widget %1$s %2$s">',
+    'after_widget'  => '</article>',
+    'before_title'  => '<div class="page-header"><h2>',
+    'after_title'   => '</h2></div>',
+  ));
   register_sidebar(array(
     'name'          => __('Footer 1', 'roots'),
     'id'            => 'sidebar-footer-1',
-    'before_widget' => '<section class="widget %1$s %2$s">',
+    'before_widget' => '<section class="col-md-4 widget %1$s %2$s">',
     'after_widget'  => '</section>',
     'before_title'  => '<h3>',
     'after_title'   => '</h3>',
@@ -56,7 +63,7 @@ function roots_widgets_init() {
   register_sidebar(array(
     'name'          => __('Footer 2', 'roots'),
     'id'            => 'sidebar-footer-2',
-    'before_widget' => '<section class="widget %1$s %2$s">',
+    'before_widget' => '<section class="col-md-4 widget %1$s %2$s">',
     'after_widget'  => '</section>',
     'before_title'  => '<h3>',
     'after_title'   => '</h3>',
@@ -64,7 +71,7 @@ function roots_widgets_init() {
   register_sidebar(array(
     'name'          => __('Footer 3', 'roots'),
     'id'            => 'sidebar-footer-3',
-    'before_widget' => '<section class="widget %1$s %2$s">',
+    'before_widget' => '<section class="col-md-4 widget %1$s %2$s">',
     'after_widget'  => '</section>',
     'before_title'  => '<h3>',
     'after_title'   => '</h3>',
