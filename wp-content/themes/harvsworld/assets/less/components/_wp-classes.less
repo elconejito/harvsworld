@@ -26,3 +26,45 @@ figure.alignnone {
     margin-left: (@line-height-computed / 2);
   }
 }
+
+#wp-calendar {
+  width: 100%;
+}
+#wp-calendar caption {
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+#wp-calendar thead {
+}
+#wp-calendar thead th {
+  text-align: center;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  background-color: @gray-lighter;
+  color: @brand-primary;
+}
+#wp-calendar tbody {
+}
+#wp-calendar tbody td {
+  border-bottom: 1px solid @gray-lighter;
+  text-align: center; 
+  padding:8px;
+}
+#wp-calendar tbody td a {
+  display: block;
+}
+#wp-calendar tbody td a:hover {
+  background: @brand-secondary;
+  color: #fff;
+}
+#wp-calendar tbody .pad {
+  background: none;
+}
+#wp-calendar tfoot #next {
+  text-transform: uppercase; 
+  text-align: right;
+}
+#wp-calendar tfoot #prev {
+  text-transform: uppercase;
+  padding-top: 10px;
+}

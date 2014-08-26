@@ -6230,6 +6230,43 @@ figure.alignnone {
     margin-left: 12.5px;
   }
 }
+#wp-calendar {
+  width: 100%;
+}
+#wp-calendar caption {
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+#wp-calendar thead th {
+  text-align: center;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  background-color: #eeeeee;
+  color: #2f455b;
+}
+#wp-calendar tbody td {
+  border-bottom: 1px solid #eeeeee;
+  text-align: center;
+  padding: 8px;
+}
+#wp-calendar tbody td a {
+  display: block;
+}
+#wp-calendar tbody td a:hover {
+  background: #f07a2d;
+  color: #fff;
+}
+#wp-calendar tbody .pad {
+  background: none;
+}
+#wp-calendar tfoot #next {
+  text-transform: uppercase;
+  text-align: right;
+}
+#wp-calendar tfoot #prev {
+  text-transform: uppercase;
+  padding-top: 10px;
+}
 .main {
   position: relative;
   min-height: 1px;
