@@ -12,7 +12,7 @@
                     <?php get_template_part('templates/entry-meta'); ?>
                 </header>
                 <div class="entry-content">
-                    <?php if ( has_post_thumbnail() ) the_post_thumbnail( 'featured', [ 'class' => 'img-responsive'] ); ?>
+                    <a href="<?php the_permalink(); ?>"><?php if ( has_post_thumbnail() ) the_post_thumbnail( 'featured', [ 'class' => 'img-responsive featured'] ); ?></a>
                     <?php the_excerpt(); ?>
                 </div>
                 <footer class="entry-footer">
@@ -32,7 +32,7 @@
                     <?php get_template_part('templates/entry-meta'); ?>
                 </header>
                 <div class="entry-content">
-                    <?php if ( has_post_thumbnail() ) the_post_thumbnail( 'featured', [ 'class' => 'img-responsive'] ); ?>
+                    <a href="<?php the_permalink(); ?>"><?php if ( has_post_thumbnail() ) the_post_thumbnail( 'featured', [ 'class' => 'img-responsive featured'] ); ?></a>
                     <?php the_excerpt(); ?>
                 </div>
                 <footer class="entry-footer">
@@ -60,7 +60,7 @@
                             <?php get_template_part('templates/entry-meta'); ?>
                         </header>
                         <div class="entry-content">
-                            <?php if ( has_post_thumbnail() ) the_post_thumbnail( 'featured', [ 'class' => 'img-responsive'] ); ?>
+                            <a href="<?php the_permalink(); ?>"><?php if ( has_post_thumbnail() ) the_post_thumbnail( 'featured', [ 'class' => 'img-responsive featured'] ); ?></a>
                             <?php the_excerpt(); ?>
                         </div>
                         <footer class="entry-footer">
