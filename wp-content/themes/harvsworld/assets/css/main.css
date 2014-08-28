@@ -6291,6 +6291,15 @@ figure.alignnone {
     width: 66.66666667%;
   }
 }
+.banner {
+  background: -webkit-gradient(linear, left top, left bottom, from(#2f455b), to(#2a3d51));
+  background: -webkit-linear-gradient(#2f455b, #2a3d51);
+  background: -o-linear-gradient(#2f455b, #2a3d51);
+  background: linear-gradient(#2f455b, #2a3d51);
+  border-bottom: 1px solid #90abc6;
+  -webkit-box-shadow: 0 0 5px 2px #777777;
+          box-shadow: 0 0 5px 2px #777777;
+}
 .sidebar {
   position: relative;
   min-height: 1px;
@@ -6404,6 +6413,22 @@ figure.alignnone {
 }
 .hentry .entry-title {
   margin-bottom: 0;
+}
+.hentry .entry-content:before,
+.hentry .entry-content:after {
+  content: " ";
+  display: table;
+}
+.hentry .entry-content:after {
+  clear: both;
+}
+.hentry .entry-content:before,
+.hentry .entry-content:after {
+  content: " ";
+  display: table;
+}
+.hentry .entry-content:after {
+  clear: both;
 }
 .hentry img.featured {
   margin-bottom: 12.5px;
