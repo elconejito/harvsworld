@@ -38,6 +38,8 @@ function hw_latest_posts($args = array()) {
 }
 
 /**
+ * Get the posts needed to complete the home page
+ *
  * @return array
  */
 function hw_home_posts() {
@@ -141,3 +143,18 @@ function hw_init_widgets() {
     register_widget( 'Recents_Widget' );
 }
 add_action( 'widgets_init', 'hw_init_widgets');
+
+
+/**
+ * Bug testing only. Not to be used on a production site!!
+ */
+add_action('wp_footer', 'roots_wrap_info');
+
+function roots_wrap_info() {
+    $format = '<h6>The %s template being used is: %s</h6>';
+    $main   = Roots_Wrapping::$main_template;
+    global $template;
+
+    printf($format, 'Main', $main);
+    printf($format, 'Base', $template);
+}

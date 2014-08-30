@@ -2114,24 +2114,46 @@
 // Use this variable to set up the common and page specific functions. If you 
 // rename this variable, you will also need to rename the namespace below.
 var Roots = {
-  // All pages
-  common: {
-    init: function() {
-      // JavaScript to be fired on all pages
+    // All pages
+    common: {
+        init: function() {
+            // JavaScript to be fired on all pages
+        }
+    },
+    // Home page
+    home: {
+        init: function() {
+            // JavaScript to be fired on the home page
+        }
+    },
+    // About us page, note the change from about-us to about_us.
+    about_us: {
+        init: function() {
+            // JavaScript to be fired on the about us page
+        }
+    },
+    single_format_gallery: {
+        init: function() {
+            console.log('single_format_gallery init');
+            var slickFor = $('.slider-for');
+            var slickNav = $('.slider-nav');
+            slickFor.slick({
+                lazyLoad: 'ondemand',
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                asNavFor: '.slider-nav',
+                onInit: function(e) { console.log('slider-for inited'); }
+            });
+            slickNav.slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                asNavFor: '.slider-for',
+                centerMode: true,
+                focusOnSelect: true,
+                onInit: function(e) { console.log('slider-nav inited'); }
+            });
+        }
     }
-  },
-  // Home page
-  home: {
-    init: function() {
-      // JavaScript to be fired on the home page
-    }
-  },
-  // About us page, note the change from about-us to about_us.
-  about_us: {
-    init: function() {
-      // JavaScript to be fired on the about us page
-    }
-  }
 };
 
 // The routing fires all common scripts, followed by the page specific scripts.

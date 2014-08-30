@@ -9,10 +9,11 @@ add_theme_support('bootstrap-gallery');     // Enable Bootstrap's thumbnails com
 // add_theme_support('jquery-cdn');            // Enable to load jQuery from the Google CDN
 
 /**
- * Add image sizes I need. The 'false' means it will be cropped
+ * Add image sizes I need. The 'true' means it will be cropped, 'false' means it keeps aspect ratio
  * explanation of cropping: http://www.davidtan.org/wordpress-hard-crop-vs-soft-crop-difference-comparison-example/
  */
 add_image_size( 'carousel', 1170, 500, true );
+add_image_size( 'fullhd', 1920, 1080, false );
 add_image_size( 'featured', 550, 180, true );
 
 /**
@@ -53,15 +54,28 @@ function roots_display_sidebar() {
      * The second element must be an array even if there's only 1 argument.
      */
     array(
-      'is_404',
-      'is_front_page'
+        'is_404',
+        'is_front_page',
+        [
+            'has_post_format',
+            [
+                'gallery'
+            ]
+        ],
+        [
+            'has_post_format',
+            [
+                'image'
+            ]
+        ]
     ),
     /**
      * Page template checks (via is_page_template())
      * Any of these page templates that return true won't show the sidebar
      */
     array(
-      'template-custom.php'
+        'template-custom.php',
+        'template-photos.php',
     )
   );
 
