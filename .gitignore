@@ -6,11 +6,10 @@
 /*
 !.gitignore
 !wp-content/
-# Ignore everything in the "wp-content" directory, except the "plugins"
-# and "themes" directories.
+# Ignore everything in the "wp-content" directory, except the "themes" directories.
 wp-content/*
-!wp-content/plugins/
-!wp-content/themes/
+!wp-content/themes/roots/
+!wp-content/themes/harvsworld/
 
 #################
 ## PHPStorm
