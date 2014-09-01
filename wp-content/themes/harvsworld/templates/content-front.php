@@ -24,7 +24,7 @@
         <article class="col-md-4 hentry">
             <div class="page-header">
                 <h2>Quick Hits
-                    <br /><small>more in <a href="<?php echo esc_url( get_category_link( get_cat_ID('quick-hits') ) ); ?>" title="Quick HitsCategory">Quick Hits</a></small></h2>
+                    <br /><small>more in <a href="<?php echo esc_url( get_category_link( get_cat_ID('quick hits') ) ); ?>" title="Quick HitsCategory">Quick Hits</a></small></h2>
             </div>
             <?php if ( $frontPagePosts['quick']->have_posts() ) : $frontPagePosts['quick']->the_post(); ?>
                 <header class="entry-header">

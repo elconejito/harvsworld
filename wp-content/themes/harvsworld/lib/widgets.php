@@ -17,6 +17,11 @@ class Category_Widget extends WP_Widget {
                 'description' => __( 'A Category Widget', 'roots' ),
             ) // Args
 		);
+
+        // triggered events, copied from WP Default Widgets
+        add_action( 'save_post', array($this, 'flush_widget_cache') );
+        add_action( 'deleted_post', array($this, 'flush_widget_cache') );
+        add_action( 'switch_theme', array($this, 'flush_widget_cache') );
     }
     
     /**
@@ -33,25 +38,36 @@ class Category_Widget extends WP_Widget {
 		/** This filter is documented in wp-includes/default-widgets.php */
 		$title = apply_filters( 'widget_title', empty( $instance['title'] ) ? __( 'Categories', 'roots' ) : $instance['title'], $instance, $this->id_base );
 
-		$c = ! empty( $instance['count'] ) ? '1' : '0';
-		$h = ! empty( $instance['hierarchical'] ) ? '1' : '0';
-
 		echo $before_widget;
 		if ( $title )
 			echo $before_title . $title . $after_title;
 
-		$cat_args = array('orderby' => 'name', 'show_count' => $c, 'hierarchical' => $h);
+		$cat_args = array('orderby' => 'name', 'pad_counts' => '0');
         $categories = get_categories($cat_args);
         
         // start the UL, bootstrap style
         echo '<ul class="list-group">';
 		// do we have anything to output?
 		if ( $categories ) {
+            // loop through and grab each category, putting them in groups according to parent
+            $list = [];
 		    foreach($categories as $category) {
-		        echo '<li class="list-group-item">';
-		        echo '<span class="badge">' . $category->count . '</span>';
-		        echo '<a href="' . get_category_link( $category->term_id ) . '" title="' . sprintf( __( "View all posts in %s" ), $category->name ) . '" ' . '>' . $category->name.'</a>';
-		        echo '</li>';
+                $class = 'list-group-item';
+                if ( (is_category() && is_archive() && get_category(get_query_var('cat'))->slug == $category->slug) || (is_single() && in_category($category->cat_ID)) ) {
+                    $class .= ' active';
+                }
+                $list[$category->category_parent][$category->cat_ID] = '<li class="'.$class.'"><span class="badge">' . $category->count . '</span><a href="' . get_category_link( $category->cat_ID ) . '" title="' . sprintf( __( "View all posts in %s" ), $category->name ) . '" ' . '>' . $category->name.'</a></li>';
+            }
+            // echo back the categories
+            foreach ( $list[0] as $id => $item ) {
+                echo $item;
+                if ( is_array($list[$id]) ) {
+                    echo '<ul>';
+                    foreach ( $list[$id] as $sub ) {
+                        echo $sub;
+                    }
+                    echo '</ul>';
+                }
             }
 		} else {
 		    echo '<li class="list-group-item">nothing to show</li>';
@@ -196,6 +212,13 @@ class Recents_Widget extends WP_Widget {
     public function form( $instance ) {
         echo '<p class="no-options-widget">' . __('There are no options for this widget.') . '</p>';
         return 'noform';
+    }
+
+    /**
+     * flush old posts
+     */
+    function flush_widget_cache() {
+        wp_cache_delete('widget_recent_posts', 'widget');
     }
     
     /**
