@@ -6,6 +6,9 @@
 @brand-tertiary:    #4A535B;    // blue-grey
 @link-color:        @brand-secondary;
 
+//** Background color for `<body>`.
+@body-bg:           @gray-darker;
+
 // Navbar Colors
 // -------------------------
 @navbar-default-color:              @gray-lighter;
@@ -15,6 +18,8 @@
 @navbar-default-link-hover-color:   @brand-secondary;
 @navbar-default-link-active-color:  @brand-secondary;
 @navbar-default-link-active-bg:     darken(@navbar-default-bg, 6.5%);
+
+@navbar-margin-bottom:             0;
 
 // Fonts
 // -------------------------
@@ -28,9 +33,7 @@
 
 // Glyphicons path
 // -------------------------
-
 @icon-font-path:        "../vendor/bootstrap/fonts/";
 
 @main-sm-columns:       @grid-columns;
-
 @sidebar-sm-columns:    4;

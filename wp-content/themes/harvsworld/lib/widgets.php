@@ -62,11 +62,11 @@ class Category_Widget extends WP_Widget {
             foreach ( $list[0] as $id => $item ) {
                 echo $item;
                 if ( is_array($list[$id]) ) {
-                    echo '<ul>';
+                    echo '<li class="list-group-child"><ul class="list-group">';
                     foreach ( $list[$id] as $sub ) {
                         echo $sub;
                     }
-                    echo '</ul>';
+                    echo '</ul></li>';
                 }
             }
 		} else {

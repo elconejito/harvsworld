@@ -884,7 +884,7 @@ body {
   font-size: 16px;
   line-height: 1.6;
   color: #333333;
-  background-color: #ffffff;
+  background-color: #222222;
 }
 input,
 button,
@@ -932,7 +932,7 @@ img {
 .img-thumbnail {
   padding: 4px;
   line-height: 1.6;
-  background-color: #ffffff;
+  background-color: #222222;
   border: 1px solid #dddddd;
   border-radius: 4px;
   -webkit-transition: all 0.2s ease-in-out;
@@ -2082,7 +2082,7 @@ th {
   border-top: 2px solid #dddddd;
 }
 .table .table {
-  background-color: #ffffff;
+  background-color: #222222;
 }
 .table-condensed > thead > tr > th,
 .table-condensed > tbody > tr > th,
@@ -3624,7 +3624,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
   color: #555555;
-  background-color: #ffffff;
+  background-color: #222222;
   border: 1px solid #dddddd;
   border-bottom-color: transparent;
   cursor: default;
@@ -3670,7 +3670,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   .nav-tabs.nav-justified > .active > a,
   .nav-tabs.nav-justified > .active > a:hover,
   .nav-tabs.nav-justified > .active > a:focus {
-    border-bottom-color: #ffffff;
+    border-bottom-color: #222222;
   }
 }
 .nav-pills > li {
@@ -3738,7 +3738,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   .nav-tabs-justified > .active > a,
   .nav-tabs-justified > .active > a:hover,
   .nav-tabs-justified > .active > a:focus {
-    border-bottom-color: #ffffff;
+    border-bottom-color: #222222;
   }
 }
 .tab-content > .tab-pane {
@@ -3755,7 +3755,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar {
   position: relative;
   min-height: 50px;
-  margin-bottom: 25px;
+  margin-bottom: 0;
   border: 1px solid transparent;
 }
 @media (min-width: 768px) {
@@ -4573,7 +4573,7 @@ a.list-group-item.active > .badge,
   padding: 4px;
   margin-bottom: 25px;
   line-height: 1.6;
-  background-color: #ffffff;
+  background-color: #222222;
   border: 1px solid #dddddd;
   border-radius: 4px;
   -webkit-transition: all 0.2s ease-in-out;
@@ -6268,6 +6268,8 @@ figure.alignnone {
   padding-top: 10px;
 }
 .main {
+  background-color: #fff;
+  padding-bottom: 40px;
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -6297,10 +6299,11 @@ figure.alignnone {
   background: -o-linear-gradient(#2f455b, #2a3d51);
   background: linear-gradient(#2f455b, #2a3d51);
   border-bottom: 1px solid #90abc6;
-  -webkit-box-shadow: 0 0 5px 2px #777777;
-          box-shadow: 0 0 5px 2px #777777;
+  -webkit-box-shadow: 0 0 5px 2px #000;
+          box-shadow: 0 0 5px 2px #000;
 }
 .sidebar {
+  padding-top: 40px;
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -6315,16 +6318,42 @@ figure.alignnone {
 .widget .list-group-item {
   border-top: none;
   border-right: none;
-  border-left: 4px solid #fff;
-  border-bottom: 1px solid #eeeeee;
-  border-radius: 0;
+  border-left: none;
+  border-bottom: 1px solid #777777;
+  margin-bottom: 0;
+  background-color: #333333;
+}
+.widget .list-group-item a {
+  color: #eeeeee;
+  display: block;
+}
+.widget .list-group-item a:hover,
+.widget .list-group-item.active a {
+  color: #f07a2d;
+}
+.widget .list-group-item:hover,
+.widget .list-group-item.active {
+  background-color: #2f455b;
+}
+.widget .list-group-child {
+  list-style-type: none;
+}
+.widget .list-group-child .list-group {
   margin-bottom: 0;
 }
-.widget .list-group-item:hover {
-  border-left: 4px solid #f07a2d;
+.widget .list-group-child .list-group-item {
+  border-left: 4px solid #777777;
+  border-radius: 0;
+}
+.sidebar .widget h1,
+.sidebar .widget h2,
+.sidebar .widget h3,
+.sidebar .widget h4,
+.sidebar .widget h5,
+.sidebar .widget h6 {
+  color: #eeeeee;
 }
 .content-info {
-  margin-top: 40px;
   padding-top: 20px;
   padding-bottom: 20px;
   background-color: #2f455b;
