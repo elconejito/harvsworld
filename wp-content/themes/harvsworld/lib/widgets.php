@@ -17,11 +17,6 @@ class Category_Widget extends WP_Widget {
                 'description' => __( 'A Category Widget', 'roots' ),
             ) // Args
 		);
-
-        // triggered events, copied from WP Default Widgets
-        add_action( 'save_post', array($this, 'flush_widget_cache') );
-        add_action( 'deleted_post', array($this, 'flush_widget_cache') );
-        add_action( 'switch_theme', array($this, 'flush_widget_cache') );
     }
     
     /**
