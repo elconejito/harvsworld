@@ -21,7 +21,7 @@ function roots_scripts() {
    */
   if (WP_ENV === 'development') {
     $assets = array(
-      'fonts'     => '//fonts.googleapis.com/css?family=Open+Sans:400,700|Oswald:400,700',
+      'fonts'     => '//fonts.googleapis.com/css?family=Open+Sans:400,700|Oswald:400',
       'css'       => '/assets/css/main.css',
       'js'        => '/assets/js/scripts.js',
       'modernizr' => '/assets/vendor/modernizr/modernizr.js',
@@ -33,7 +33,7 @@ function roots_scripts() {
     $get_assets = file_get_contents(get_stylesheet_directory_uri() . '/assets/manifest.json');
     $assets     = json_decode($get_assets, true);
     $assets     = array(
-      'fonts'     => '//fonts.googleapis.com/css?family=Open+Sans:400,700|Oswald:400,700',
+      'fonts'     => '//fonts.googleapis.com/css?family=Open+Sans:400,700|Oswald:400',
       'css'       => '/assets/css/main.min.css?' . $assets['assets/css/main.min.css']['hash'],
       'js'        => '/assets/js/scripts.min.js?' . $assets['assets/js/scripts.min.js']['hash'],
       'modernizr' => '/assets/js/vendor/modernizr.min.js',
