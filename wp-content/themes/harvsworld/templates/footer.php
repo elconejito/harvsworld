@@ -8,7 +8,7 @@
   </div>
   <div class="container">
     <div class="row">
-      <p>Copyright &copy; <?php echo date("Y"); ?> harvsworld.com. Powered by Little Rabbit Studios.</p>
+      <p>Copyright &copy; <?php echo date("Y"); ?> harvsworld.com. Powered by <a href="http://littlerabbitstudios.com">Little Rabbit Studios</a>.</p>
     </div>
   </div>
 </footer>
