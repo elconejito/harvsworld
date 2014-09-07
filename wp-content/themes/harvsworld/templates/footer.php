@@ -1,9 +1,15 @@
 <footer class="content-info" role="contentinfo">
   <div class="container">
     <div class="row">
-      <?php dynamic_sidebar('sidebar-footer-1'); ?>
-      <?php dynamic_sidebar('sidebar-footer-2'); ?>
-      <?php dynamic_sidebar('sidebar-footer-3'); ?>
+      <div class="col-md-4">
+        <?php dynamic_sidebar('sidebar-footer-left'); ?>
+      </div>
+      <div class="col-md-4">
+        <?php dynamic_sidebar('sidebar-footer-center'); ?>
+      </div>
+      <div class="col-md-4">
+        <?php dynamic_sidebar('sidebar-footer-right'); ?>
+      </div>
     </div>
   </div>
   <div class="container">

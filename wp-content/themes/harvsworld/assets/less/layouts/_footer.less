@@ -3,6 +3,12 @@
   padding-bottom: 40px;
   background-color: @brand-primary;
   color: @gray-lighter;
+  a {
+    color: @brand-secondary;
+    &:hover {
+      color: darken(@brand-secondary, 10%);
+    }
+  }
 }
 
 .content-info h1,
@@ -15,9 +21,13 @@
 }
 
 .content-info .widget .list-group-item {
-  background-color: @brand-primary;
-  border-left: 4px solid @brand-primary;
-  border-bottom: 1px solid @gray-light;
+  background-color: lighten(@brand-primary, 10%);
+}
+.content-info .widget .list-group-child .list-group-item {
+}
+.content-info .widget .list-group-item:hover,
+.content-info .widget .list-group-item.active {
+  background-color: darken(@brand-primary, 10%);
 }
 
 .content-info .container:last-child {

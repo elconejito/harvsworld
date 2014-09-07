@@ -6369,6 +6369,12 @@ img.aligncenter,
   background-color: #2f455b;
   color: #eeeeee;
 }
+.content-info a {
+  color: #f07a2d;
+}
+.content-info a:hover {
+  color: #da6010;
+}
 .content-info h1,
 .content-info h2,
 .content-info h3,
@@ -6378,9 +6384,11 @@ img.aligncenter,
   color: #fff;
 }
 .content-info .widget .list-group-item {
-  background-color: #2f455b;
-  border-left: 4px solid #2f455b;
-  border-bottom: 1px solid #777777;
+  background-color: #405e7d;
+}
+.content-info .widget .list-group-item:hover,
+.content-info .widget .list-group-item.active {
+  background-color: #1e2b39;
 }
 .content-info .container:last-child {
   margin-top: 40px;
