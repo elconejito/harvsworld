@@ -36,8 +36,12 @@ class Category_Widget extends WP_Widget {
 		echo $before_widget;
 		if ( $title )
 			echo $before_title . $title . $after_title;
-
-		$cat_args = array('orderby' => 'name', 'pad_counts' => '0');
+		
+		$cat_args = array(
+		    'orderby' => 'name',
+		    'pad_counts' => '0',
+		    'exclude' => get_category_by_slug('featured')->term_id
+		);
         $categories = get_categories($cat_args);
         
         // start the UL, bootstrap style
