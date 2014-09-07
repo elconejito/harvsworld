@@ -178,8 +178,9 @@ function hw_slick_gallery() {
     if (empty($attachments)) {
         return '';
     }
-
-    $output = '<div class="slick-slider slider-for">';
+    $prev = '<a href="#" class="slick-left left carousel-control"><span class="glyphicon glyphicon-chevron-left"></span></a>';
+    $next = '<a href="#" class="slick-right right carousel-control"><span class="glyphicon glyphicon-chevron-right"></span></a>';
+    $output = '<div class="slick-slider slider-for">' . $prev . $next;
     $outputNav = '<div class="slick-slider slider-nav">';
 
     $i = 0;
@@ -189,7 +190,7 @@ function hw_slick_gallery() {
         $outputNav .= '<div>';
 
         // get the url of the image
-        $url = wp_get_attachment_image_src($id, 'fullhd');
+        $url = wp_get_attachment_image_src($id, 'carousel');
         $url = $url[0];
 
         // custom <img> for Slick slider using lazy load
@@ -210,7 +211,6 @@ function hw_slick_gallery() {
     $output .= '</div>';
     $outputNav .= '</div>';
 
-    // return '<div class="modal slick-modal"><div class="modal-dialog"><div class="modal-content">' . $output . $outputNav .'</div></div></div>';
     return '<div>' . $output . $outputNav .'</div>';
 
 }

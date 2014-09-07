@@ -1,5 +1,5 @@
 <?php get_template_part('templates/head'); ?>
-<body <?php body_class(); ?>>
+<body <?php body_class('slick-gallery'); ?>>
 
   <?php
     do_action('get_header');

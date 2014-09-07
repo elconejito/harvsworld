@@ -6457,6 +6457,10 @@ img.aligncenter,
 .home .row.posts-row {
   margin-bottom: 40px;
 }
+.slick-left,
+.slick-right {
+  z-index: 10;
+}
 .hentry {
   margin-bottom: 60px;
 }

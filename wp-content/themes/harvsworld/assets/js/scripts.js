@@ -2132,9 +2132,9 @@ var Roots = {
             // JavaScript to be fired on the about us page
         }
     },
-    single_format_gallery: {
+    slick_gallery: {
         init: function() {
-            console.log('single_format_gallery init');
+            console.log('slick_gallery init');
             var slickFor = $('.slider-for');
             var slickNav = $('.slider-nav');
             slickFor.slick({
@@ -2142,14 +2142,38 @@ var Roots = {
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 asNavFor: '.slider-nav',
+                prevArrow: $('.slick-left'),
+                nextArrow: $('.slick-right'),
                 onInit: function(e) { console.log('slider-for inited'); }
             });
             slickNav.slick({
-                slidesToShow: 3,
+                slidesToShow: 6,
                 slidesToScroll: 1,
                 asNavFor: '.slider-for',
-                centerMode: true,
                 focusOnSelect: true,
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 3
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ],
                 onInit: function(e) { console.log('slider-nav inited'); }
             });
         }
