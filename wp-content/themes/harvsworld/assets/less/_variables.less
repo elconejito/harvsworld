@@ -4,7 +4,7 @@
 @brand-primary:     #2F455B;    // blue
 @brand-secondary:   #F07A2D;    // orange
 @brand-tertiary:    #4A535B;    // blue-grey
-@link-color:        @brand-secondary;
+@link-color:        lighten(@brand-primary, 20%);
 
 //** Background color for `<body>`.
 @body-bg:           @gray-darker;
@@ -23,8 +23,10 @@
 
 // Fonts
 // -------------------------
-@font-family-sans-serif:        "Roboto", Arial, sans-serif;
-@headings-font-family:          'Roboto Slab', serif;
+// @font-family-sans-serif:        "Roboto", Arial, sans-serif;
+// @headings-font-family:          'Roboto Slab', serif;
+@font-family-sans-serif:        "Open Sans", Arial, sans-serif;
+@headings-font-family:          'Oswald', serif;
 
 @font-size-base:                16px;
 @line-height-base:              1.6;
@@ -37,3 +39,14 @@
 
 @main-sm-columns:       @grid-columns;
 @sidebar-sm-columns:    4;
+
+//== Thumbnails
+// -------------------------
+
+//** Thumbnail background color
+@thumbnail-bg:                @gray-lighter;
+//** Thumbnail border color
+@thumbnail-border:            #ddd;
+
+//** Custom text color for thumbnail captions
+@thumbnail-caption-color:     @text-color;
