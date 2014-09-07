@@ -19,7 +19,7 @@ add_image_size( 'featured', 550, 180, true );
 /**
  * Configuration values
  */
-define('GOOGLE_ANALYTICS_ID', ''); // UA-XXXXX-Y (Note: Universal Analytics only, not Classic Analytics)
+define('GOOGLE_ANALYTICS_ID', 'UA-23022925-1'); // UA-XXXXX-Y (Note: Universal Analytics only, not Classic Analytics)
 
 if (!defined('WP_ENV')) {
   define('WP_ENV', 'production');  // scripts.php checks for values 'production' or 'development'
