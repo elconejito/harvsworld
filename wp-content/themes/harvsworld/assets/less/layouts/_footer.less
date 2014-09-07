@@ -1,6 +1,6 @@
 .content-info {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   background-color: @brand-primary;
   color: @gray-lighter;
 }
@@ -15,7 +15,14 @@
 }
 
 .content-info .widget .list-group-item {
-    background-color: @brand-primary;
-    border-left: 4px solid @brand-primary;
-    border-bottom: 1px solid @gray-light;
+  background-color: @brand-primary;
+  border-left: 4px solid @brand-primary;
+  border-bottom: 1px solid @gray-light;
+}
+
+.content-info .container:last-child {
+  margin-top: 40px;
+  padding-top: 15px;
+  text-align: center;
+  background-color: darken(@brand-primary, 10%);
 }

@@ -6363,8 +6363,8 @@ img.aligncenter,
   color: #eeeeee;
 }
 .content-info {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   background-color: #2f455b;
   color: #eeeeee;
 }
@@ -6380,6 +6380,12 @@ img.aligncenter,
   background-color: #2f455b;
   border-left: 4px solid #2f455b;
   border-bottom: 1px solid #777777;
+}
+.content-info .container:last-child {
+  margin-top: 40px;
+  padding-top: 15px;
+  text-align: center;
+  background-color: #1e2b39;
 }
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
