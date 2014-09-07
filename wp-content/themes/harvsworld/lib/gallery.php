@@ -216,9 +216,9 @@ function hw_slick_gallery() {
 }
 
 if (current_theme_supports('bootstrap-gallery')) {
-  remove_shortcode('gallery');
-  add_shortcode('gallery', 'roots_gallery');
-  add_filter('use_default_gallery_style', '__return_null');
+    remove_shortcode('gallery');
+    add_shortcode('gallery', 'hw_slick_gallery');
+    add_filter('use_default_gallery_style', '__return_null');
 }
 
 /**
