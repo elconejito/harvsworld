@@ -6461,6 +6461,9 @@ img.aligncenter,
 .slick-right {
   z-index: 10;
 }
+.slider-for .slick-slide {
+  background-color: #333333;
+}
 .hentry {
   margin-bottom: 60px;
 }

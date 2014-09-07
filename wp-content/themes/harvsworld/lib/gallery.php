@@ -195,7 +195,7 @@ function hw_slick_gallery() {
 
         // custom <img> for Slick slider using lazy load
         // use the regular thumbnail image for the carousel at the bottom
-        $output .= '<img data-lazy="'.$url.'" class="img-responsive"/>';
+        $output .= '<img src="'.get_stylesheet_directory_uri() . '/assets/css/vendor/ajax-loader.gif" data-lazy="'.$url.'" class="img-responsive"/>';
         $outputNav .= wp_get_attachment_image($id, 'thumbnail', false, array('class' => 'img-thumbnail'));
 
         if ( trim($attachment->post_excerpt) ) {
