@@ -115,7 +115,7 @@ function roots_gallery($attr) {
   return $output;
 }
 
-function hw_slick_gallery() {
+function hw_bootstrap_gallery($opts) {
     // if this is a feed, gtfo
     if (is_feed())
         return '';
@@ -178,46 +178,63 @@ function hw_slick_gallery() {
     if (empty($attachments)) {
         return '';
     }
-    $prev = '<a href="#" class="slick-left left carousel-control"><span class="glyphicon glyphicon-chevron-left"></span></a>';
-    $next = '<a href="#" class="slick-right right carousel-control"><span class="glyphicon glyphicon-chevron-right"></span></a>';
-    $output = '<div class="slick-slider slider-for">' . $prev . $next;
-    $outputNav = '<div class="slick-slider slider-nav">';
+
+    // this ID is to give each carousel a unique ID for targeting by controls.
+    $targetID = $id.'-'.rand(0, 100);
+
+    // Build the framework for the slides
+    // The Outer Container
+    $outerStart = '<div id="'.$targetID.'" class="carousel slide" data-ride="carousel">';
+    $outerEnd = '</div>';
+    // The Indicators
+    $indicatorsStart = '<!-- Indicators --><ol class="carousel-indicators">';
+    $indicatorsEnd = '</ol><!-- /.carousel-indicators -->';
+    // The Slides
+    $slidesStart = '<!-- Wrapper for slides --><div class="carousel-inner">';
+    $slidesEnd = '</div><!-- /.carousel-inner -->';
+    // The Controls
+    $controlsStart = '<!-- Controls -->';
+    $controlsEnd = '';
+
+    // Build next/prev buttons
+    $prev = '<a class="left carousel-control" href="#carousel-'.$targetID.'" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>';
+    $next = '<a class="right carousel-control" href="#carousel-'.$targetID.'" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>';
 
     $i = 0;
+    $slides = '';
+    $slideNav = '';
     foreach ($attachments as $id => $attachment) {
+        $isActive = ( $i === 0 ? 'active':'' );
         // open the div for each item
-        $output .= '<div>';
-        $outputNav .= '<div>';
+        $slides .= '<div class="item '.$isActive.'">';
+        $slideNav .= '<li data-target="#carousel-'.$targetID.'" data-slide-to="'.$i.'" class="'.$isActive.'"></li>';
 
-        // get the url of the image
+        // get the info of the main image. wp_get_attachment_image_src returns an array or url, width, height
         $url = wp_get_attachment_image_src($id, 'carousel');
-        $url = $url[0];
 
         // custom <img> for Slick slider using lazy load
         // use the regular thumbnail image for the carousel at the bottom
-        $output .= '<img src="'.get_stylesheet_directory_uri() . '/assets/css/vendor/ajax-loader.gif" data-lazy="'.$url.'" class="img-responsive"/>';
-        $outputNav .= wp_get_attachment_image($id, 'thumbnail', false, array('class' => 'img-thumbnail'));
+        $slides .= '<img src="'.get_stylesheet_directory_uri() . '/assets/css/vendor/ajax-loader.gif" data-original="'.$url[0].'" width="'.$url[1].'" height="'.$url[2].'" class="lazy img-responsive"/>';
+        // $outputNav .= wp_get_attachment_image($id, 'thumbnail', false, array('class' => 'img-thumbnail'));
 
         if ( trim($attachment->post_excerpt) ) {
-            $output .= '<div class="caption">' . wptexturize($attachment->post_excerpt) . '</div>';
+            $slides .= '<div class="carousel-caption">'.wptexturize($attachment->post_excerpt).'</div>';
         }
 
-        $output .= '</div>';
-        $outputNav .= '</div>';
+        $slides .= '</div><!-- /.item -->';
         $i++;
     }
 
-    // close out both divs
-    $output .= '</div>';
-    $outputNav .= '</div>';
+    // Put all the pieces together
+    $return = $outerStart . $indicatorsStart . $slideNav . $indicatorsEnd . $slidesStart . $slides . $slidesEnd . $controlsStart . $prev . $next . $controlsEnd . $outerEnd;
 
-    return '<div>' . $output . $outputNav .'</div>';
+    return $return;
 
 }
 
 if (current_theme_supports('bootstrap-gallery')) {
     remove_shortcode('gallery');
-    add_shortcode('gallery', 'hw_slick_gallery');
+    add_shortcode('gallery', 'hw_bootstrap_gallery');
     add_filter('use_default_gallery_style', '__return_null');
 }
 
