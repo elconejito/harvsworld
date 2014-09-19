@@ -12,8 +12,8 @@ add_theme_support('bootstrap-gallery');     // Enable Bootstrap's thumbnails com
  * Add image sizes I need. The 'true' means it will be cropped, 'false' means it keeps aspect ratio
  * explanation of cropping: http://www.davidtan.org/wordpress-hard-crop-vs-soft-crop-difference-comparison-example/
  */
-add_image_size( 'carousel', 1170, 650, true );
-add_image_size( 'fullhd', 1920, 1080, false );
+add_image_size( 'carousel', 1170, 650, false );
+add_image_size( 'fullhd', 1920, 1080, true );
 add_image_size( 'featured', 550, 180, true );
 
 /**

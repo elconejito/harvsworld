@@ -6464,6 +6464,10 @@ img.aligncenter,
 .slider-for .slick-slide {
   background-color: #333333;
 }
+.slider-for .slick-slide img {
+  margin-left: auto;
+  margin-right: auto;
+}
 .hentry {
   margin-bottom: 60px;
 }
