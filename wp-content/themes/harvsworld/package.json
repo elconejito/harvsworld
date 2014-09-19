@@ -1,8 +1,8 @@
 {
-  "name": "roots",
-  "version": "7.0.1",
-  "author": "Ben Word <ben@benword.com>",
-  "homepage": "http://roots.io",
+  "name": "harvsworld",
+  "version": "1.0",
+  "author": "Harvey Ramos <harvey@harvsworld.com>",
+  "homepage": "https://harvsworld.com",
   "repository": {
     "type": "git",
     "url": "git://github.com/roots/roots.git"

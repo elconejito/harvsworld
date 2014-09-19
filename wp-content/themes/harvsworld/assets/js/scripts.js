@@ -2360,6 +2360,7 @@ var Roots = {
     common: {
         init: function() {
             // JavaScript to be fired on all pages
+            $("img.lazy").lazyload();
         }
     },
     // Home page
@@ -2372,52 +2373,6 @@ var Roots = {
     about_us: {
         init: function() {
             // JavaScript to be fired on the about us page
-        }
-    },
-    slick_gallery: {
-        init: function() {
-            console.log('slick_gallery init');
-            var slickFor = $('.slider-for');
-            var slickNav = $('.slider-nav');
-            slickFor.slick({
-                lazyLoad: 'ondemand',
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                asNavFor: '.slider-nav',
-                prevArrow: $('.slick-left'),
-                nextArrow: $('.slick-right'),
-                onInit: function(e) { console.log('slider-for inited'); }
-            });
-            slickNav.slick({
-                slidesToShow: 6,
-                slidesToScroll: 1,
-                asNavFor: '.slider-for',
-                focusOnSelect: true,
-                responsive: [
-                    {
-                        breakpoint: 1024,
-                        settings: {
-                            slidesToShow: 3,
-                            slidesToScroll: 3
-                        }
-                    },
-                    {
-                        breakpoint: 600,
-                        settings: {
-                            slidesToShow: 2,
-                            slidesToScroll: 2
-                        }
-                    },
-                    {
-                        breakpoint: 480,
-                        settings: {
-                            slidesToShow: 1,
-                            slidesToScroll: 1
-                        }
-                    }
-                ],
-                onInit: function(e) { console.log('slider-nav inited'); }
-            });
         }
     }
 };
