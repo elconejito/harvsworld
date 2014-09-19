@@ -1,7 +1,7 @@
 {
   "name": "harvsworld",
   "version": "1.0",
-  "homepage": "http://harvsworld.com",
+  "homepage": "https://harvsworld.com",
   "authors": [
     "Harvey Ramos <harvey@harvsworld.com>"
   ],
@@ -16,6 +16,7 @@
     "modernizr": "2.8.2",
     "jquery": "2.1.1",
     "bootstrap": "3.2.0",
-    "respond": "1.4.2"
+    "respond": "1.4.2",
+    "jquery.lazyload": "~1.9.3"
   }
 }
