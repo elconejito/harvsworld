@@ -40,7 +40,6 @@ function roots_scripts() {
   }
 
   wp_enqueue_style('roots_fonts', $assets['fonts']);  // load up our own fonts
-  wp_enqueue_style('slick_css', get_stylesheet_directory_uri() . $assets['slick-css'], false, null);
   wp_enqueue_style('roots_css', get_stylesheet_directory_uri() . $assets['css'], false, null);
 
   /**
@@ -63,7 +62,6 @@ function roots_scripts() {
 
   wp_enqueue_script('modernizr', get_stylesheet_directory_uri() . $assets['modernizr'], array(), null, false);
   wp_enqueue_script('jquery');
-  wp_enqueue_script('slick_js', get_stylesheet_directory_uri() . $assets['slick-js'], array( 'jquery' ), null, true);
   wp_enqueue_script('roots_js', get_stylesheet_directory_uri() . $assets['js'], array(), null, true);
 }
 add_action('wp_enqueue_scripts', 'roots_scripts', 100);
