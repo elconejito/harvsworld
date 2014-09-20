@@ -25,9 +25,7 @@ function roots_scripts() {
       'css'       => '/assets/css/main.css',
       'js'        => '/assets/js/scripts.js',
       'modernizr' => '/assets/vendor/modernizr/modernizr.js',
-      'jquery'    => '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.js',
-      'slick-css' => '/assets/css/vendor/slick.css',
-      'slick-js'  => '/assets/js/vendor/slick.js'
+      'jquery'    => '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.js'
     );
   } else {
     $get_assets = file_get_contents(get_stylesheet_directory_uri() . '/assets/manifest.json');
@@ -38,8 +36,6 @@ function roots_scripts() {
       'js'        => '/assets/js/scripts.min.js?' . $assets['assets/js/scripts.min.js']['hash'],
       'modernizr' => '/assets/js/vendor/modernizr.min.js',
       'jquery'    => '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js',
-      'slick-css' => '/assets/css/vendor/slick.css',
-      'slick-js'  => '/assets/js/vendor/slick.js'
     );
   }
 
