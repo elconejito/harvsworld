@@ -3,9 +3,15 @@
 <div id="homeCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
-        <li data-target="#homeCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#homeCarousel" data-slide-to="1"></li>
-        <li data-target="#homeCarousel" data-slide-to="2"></li>
+        <?php
+        $indicatorClass = 'active';
+        for ( $i = 0; $i < count($frontPagePosts['featured']->posts); $i++) :
+            ?>
+        <li data-target="#homeCarousel" data-slide-to="<?php echo $i; ?>" class="<?php echo $indicatorClass; ?>"></li>
+            <?php
+            $indicatorClass = '';
+        endfor;
+        ?>
     </ol>
     <!-- carousel frame -->
     <div class="carousel-inner">

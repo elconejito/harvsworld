@@ -115,7 +115,7 @@ function roots_gallery($attr) {
   return $output;
 }
 
-function hw_bootstrap_gallery($opts) {
+function hw_bootstrap_gallery($attr) {
     // if this is a feed, gtfo
     if (is_feed())
         return '';
@@ -141,6 +141,11 @@ function hw_bootstrap_gallery($opts) {
             unset($attr['orderby']);
         }
     }
+
+    $indicatorsClass = '';
+    if ( !empty($attr['indicator']) )
+        if ( $attr['indicator'] == 'thumbs' )
+            $indicatorsClass = 'carousel-thumbnails';
 
     extract(shortcode_atts(array(
         'order'      => 'ASC',
@@ -180,14 +185,14 @@ function hw_bootstrap_gallery($opts) {
     }
 
     // this ID is to give each carousel a unique ID for targeting by controls.
-    $targetID = $id.'-'.rand(0, 100);
+    $targetID = 'carousel-'.$id.'-'.rand(0, 100);
 
     // Build the framework for the slides
     // The Outer Container
-    $outerStart = '<div id="'.$targetID.'" class="carousel slide" data-ride="carousel">';
+    $outerStart = '<div id="'.$targetID.'" class="carousel slide" data-ride="carousel" data-interval="">';
     $outerEnd = '</div>';
     // The Indicators
-    $indicatorsStart = '<!-- Indicators --><ol class="carousel-indicators">';
+    $indicatorsStart = '<!-- Indicators --><ol class="carousel-indicators '.$indicatorsClass.'">';
     $indicatorsEnd = '</ol><!-- /.carousel-indicators -->';
     // The Slides
     $slidesStart = '<!-- Wrapper for slides --><div class="carousel-inner">';
@@ -197,8 +202,8 @@ function hw_bootstrap_gallery($opts) {
     $controlsEnd = '';
 
     // Build next/prev buttons
-    $prev = '<a class="left carousel-control" href="#carousel-'.$targetID.'" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>';
-    $next = '<a class="right carousel-control" href="#carousel-'.$targetID.'" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>';
+    $prev = '<a class="left carousel-control" href="#'.$targetID.'" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>';
+    $next = '<a class="right carousel-control" href="#'.$targetID.'" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>';
 
     $i = 0;
     $slides = '';
@@ -207,14 +212,19 @@ function hw_bootstrap_gallery($opts) {
         $isActive = ( $i === 0 ? 'active':'' );
         // open the div for each item
         $slides .= '<div class="item '.$isActive.'">';
-        $slideNav .= '<li data-target="#carousel-'.$targetID.'" data-slide-to="'.$i.'" class="'.$isActive.'"></li>';
+        if ( $indicatorsClass == 'carousel-thumbnails' ) {
+            $url = wp_get_attachment_image_src($id, 'thumbnail');
+            $slideNav .= '<li data-target="#' . $targetID . '" data-slide-to="' . $i . '" class="' . $isActive . '"><img src="'.$url[0].'" class="img-responsive"/></li>';
+        } else {
+            $slideNav .= '<li data-target="#' . $targetID . '" data-slide-to="' . $i . '" class="' . $isActive . '"></li>';
+        }
 
         // get the info of the main image. wp_get_attachment_image_src returns an array or url, width, height
         $url = wp_get_attachment_image_src($id, 'carousel');
 
         // custom <img> for Slick slider using lazy load
         // use the regular thumbnail image for the carousel at the bottom
-        $slides .= '<img src="'.get_stylesheet_directory_uri() . '/assets/css/vendor/ajax-loader.gif" data-original="'.$url[0].'" width="'.$url[1].'" height="'.$url[2].'" class="lazy img-responsive"/>';
+        $slides .= '<img data-original="'.$url[0].'" width="'.$url[1].'" height="'.$url[2].'" class="lazy img-responsive"/>';
         // $outputNav .= wp_get_attachment_image($id, 'thumbnail', false, array('class' => 'img-thumbnail'));
 
         if ( trim($attachment->post_excerpt) ) {

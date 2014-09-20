@@ -6299,6 +6299,77 @@ img.aligncenter,
     width: 66.66666667%;
   }
 }
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+/* Carousel base class */
+.carousel {
+  /*margin-bottom: 60px;*/
+}
+.carousel .container {
+  padding-left: 0;
+  padding-right: 0;
+}
+.carousel-indicators {
+  background-color: #2f455b;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  width: auto;
+  margin-left: 0;
+  margin-bottom: 0;
+  padding-top: 5px;
+}
+.carousel-thumbnails li {
+  margin: 4px;
+  width: 80px;
+  height: 80px;
+  border-radius: 0;
+}
+.carousel-thumbnails .active {
+  margin: 4px;
+  width: 82px;
+  height: 82px;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.7);
+  left: 0;
+  right: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 650px;
+  background-image: url("../img/ajax-loader.gif");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 650px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (max-width: 991px) {
+  .carousel-inner > .item > img {
+    min-height: 100%;
+    min-width: none;
+  }
+}
+/* Carousel colors */
+.carousel-caption h1,
+.carousel-caption h2,
+.carousel-caption h3,
+.carousel-caption h4,
+.carousel-caption h5,
+.carousel-caption h6 {
+  color: #f07a2d;
+}
 .banner {
   background: -webkit-gradient(linear, left top, left bottom, from(#2f455b), to(#2a3d51));
   background: -webkit-linear-gradient(#2f455b, #2a3d51);
@@ -6398,75 +6469,12 @@ img.aligncenter,
 }
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
-/* Carousel base class */
-.carousel {
-  height: 500px;
-  /*margin-bottom: 60px;*/
-}
-.carousel .container {
-  padding-left: 0;
-  padding-right: 0;
-}
-.carousel-indicators {
-  bottom: 0px;
-  left: 0;
-  right: 0;
-  background-color: #2f455b;
-  width: auto;
-  margin-left: 0;
-  margin-bottom: 0;
-}
-/* Since positioning the image, we need to help out the caption */
-.carousel-caption {
-  z-index: 10;
-  background-color: rgba(0, 0, 0, 0.7);
-  left: 0;
-  right: 0;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-/* Declare heights because of positioning of img element */
-.carousel .item {
-  height: 500px;
-}
-.carousel-inner > .item > img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  height: 500px;
-}
-@media screen and (max-width: 991px) {
-  .carousel-inner > .item > img {
-    min-height: 100%;
-    max-width: none;
-  }
-}
 /* Carousel colors */
 #homeCarousel {
   background-color: #4a535b;
 }
-.carousel-caption h1,
-.carousel-caption h2,
-.carousel-caption h3,
-.carousel-caption h4,
-.carousel-caption h5,
-.carousel-caption h6 {
-  color: #f07a2d;
-}
 .home .row.posts-row {
   margin-bottom: 40px;
-}
-.slick-left,
-.slick-right {
-  z-index: 10;
-}
-.slider-for .slick-slide {
-  background-color: #333333;
-}
-.slider-for .slick-slide img {
-  margin-left: auto;
-  margin-right: auto;
 }
 .hentry {
   margin-bottom: 60px;

@@ -2360,7 +2360,10 @@ var Roots = {
     common: {
         init: function() {
             // JavaScript to be fired on all pages
-            $("img.lazy").lazyload();
+            $("img.lazy").lazyload({
+                container: $(".carousel"),
+                skip_invisible : false
+            });
         }
     },
     // Home page
