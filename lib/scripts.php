@@ -101,7 +101,7 @@ function roots_google_analytics() { ?>
       console.log('GoogleAnalytics: ' + [].slice.call(arguments));
     }
   <?php endif; ?>
-  ga('create','<?php echo GOOGLE_ANALYTICS_ID; ?>','auto');ga('send','pageview');
+  ga('create','<?php echo GOOGLE_ANALYTICS_ID; ?>','auto');ga('require', 'displayfeatures');ga('send','pageview');
 </script>
 
 <?php }
