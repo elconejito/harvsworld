@@ -14,8 +14,12 @@ function roots_wp_title($title) {
   if (is_feed()) {
     return $title;
   }
+  
+  if( empty( $title ) && ( is_home() || is_front_page() ) ) {
+    return __( 'Blog', 'roots' );
+  }
 
-  $title .= get_bloginfo('name');
+  // $title .= get_bloginfo('name');
 
   return $title;
 }
