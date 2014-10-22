@@ -1,4 +1,4 @@
-<div class="jumbotron">
+<div class="jumbotron" <?php hw_header_featured_background(); ?>>
     <header class="container page-header">
       <?php if ( is_front_page() ) : ?>
         <h1><?php echo get_bloginfo('name'); ?></h1>
@@ -11,8 +11,7 @@
         <?php get_template_part('templates/entry-meta'); ?>
       <?php elseif ( is_page() ) : ?>
         <h1><?php echo get_the_title(); ?></h1>
-        <p>is page</p>
-      <?php elseif ( is_category ) : ?>
+      <?php elseif ( is_category() ) : ?>
         <h1><small>category</small><br /><?php single_cat_title(); ?></h1>
       <?php else : ?>
         <h1><?php echo get_the_title(); ?></h1>

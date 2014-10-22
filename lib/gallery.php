@@ -248,6 +248,16 @@ if (current_theme_supports('bootstrap-gallery')) {
     add_filter('use_default_gallery_style', '__return_null');
 }
 
+function hw_header_featured_background() {
+	if ( '' != get_the_post_thumbnail() && is_single() ) {
+		$image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' );
+		echo ' style="background-image: url('.$image_url[0].');" ';
+	} else {
+		echo ' style="" ';
+	}
+
+}
+
 /**
  * Add class="thumbnail img-thumbnail" to attachment items
  */
