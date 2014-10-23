@@ -2,7 +2,38 @@
   padding-top: 40px;
   .make-sm-column(@sidebar-sm-columns);
 }
-.widget .list-group-item {
+.widget .really_simple_twitter_widget {
+  .list-group;
+  li {
+    .list-group-item;
+    color: @gray-lighter;
+    padding-left: 65px;
+    a {
+      color: @brand-secondary;
+      &:hover {
+        color: lighten(@brand-secondary, 10%);
+      }
+    }
+    img {
+      position: absolute;
+      left: 8px;
+      margin-right: 5px;
+      margin-bottom: 5px;
+      border: 1px solid #ffffff;
+    }
+    .twitter-timestamp {
+      display: block;
+      a {
+        color: @gray-light;
+        &:hover {
+          color: lighten(@gray-light, 10%);
+        }
+      }
+    }
+  }
+}
+.widget .list-group-item,
+.widget .really_simple_twitter_widget li {
   border-top: none;
   border-right: none;
   border-left: none;
