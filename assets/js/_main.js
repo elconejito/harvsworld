@@ -27,6 +27,7 @@ var Roots = {
                 container: $(".carousel"),
                 skip_invisible : false
             });
+            $(".hentry").fitVids();
         }
     },
     // Home page
