@@ -47,7 +47,7 @@ function roots_widgets_init() {
   register_sidebar(array(
     'name'          => __('Front Page', 'roots'),
     'id'            => 'sidebar-front',
-    'before_widget' => '<article class="col-md-4 widget %1$s %2$s">',
+    'before_widget' => '<article class="widget %1$s %2$s">',
     'after_widget'  => '</article>',
     'before_title'  => '<div class="page-header"><h2>',
     'after_title'   => '</h2></div>',

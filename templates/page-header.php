@@ -1,4 +1,4 @@
-<div class="jumbotron" <?php hw_header_featured_background(); ?>>
+<div <?php hw_header_featured_background(); ?>>
     <header class="container page-header">
       <?php if ( is_front_page() ) : ?>
         <h1><?php echo get_bloginfo('name'); ?></h1>

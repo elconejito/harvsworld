@@ -251,11 +251,10 @@ if (current_theme_supports('bootstrap-gallery')) {
 function hw_header_featured_background() {
 	if ( '' != get_the_post_thumbnail() && is_single() ) {
 		$image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' );
-		echo ' style="background-image: url('.$image_url[0].');" ';
+		echo 'class="jumbotron jumbo-image" style="background-image: url('.$image_url[0].');" ';
 	} else {
-		echo ' style="" ';
+	  echo 'class="jumbotron" ';
 	}
-
 }
 
 /**
