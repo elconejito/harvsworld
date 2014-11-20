@@ -257,6 +257,13 @@ function hw_header_featured_background() {
 	}
 }
 
+function hw_home_featured_background() {
+	if ( '' != get_the_post_thumbnail() && is_front_page() ) {
+		$image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' );
+		echo ' style="background-image: url('.$image_url[0].');" ';
+	}
+}
+
 /**
  * Add class="thumbnail img-thumbnail" to attachment items
  */
