@@ -161,5 +161,7 @@ if (WP_ENV === 'development') {
 
         printf($format, 'Main', $main);
         printf($format, 'Base', $template);
+        echo "<h6>is_single:".is_single()." is_page:".is_page()." is_archive:".is_archive()." is_category:".is_category()." ";
+        echo "is_front_page:".is_front_page()." is_home:".is_home()."</h6>";
     }
 }
