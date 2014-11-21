@@ -2,5 +2,6 @@
   <div class="container">
       <h1><?php bloginfo('title'); ?></h1>
       <p><span><?php bloginfo('description'); ?></span></p>
+	  <div class="down">scroll down<br /><i class="fa fa-arrow-circle-down center-block"></i></div>
   </div>
 </div>

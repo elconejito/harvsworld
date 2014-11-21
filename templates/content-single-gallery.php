@@ -5,7 +5,7 @@
             <hr />
             <h2><a name="subgalleries"></a>Sub Galleries</h2>
             <?php foreach ( array_chunk($page_children, 3) as $row ) : ?>
-                <div class="row posts-row">
+                <div class="row">
                     <?php foreach ( $row as $post ) : setup_postdata( $post ); ?>
                         <article class="col-md-4 hentry">
                             <header class="entry-header">

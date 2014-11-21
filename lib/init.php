@@ -44,14 +44,22 @@ function roots_widgets_init() {
     'before_title'  => '<h3>',
     'after_title'   => '</h3>',
   ));
-  register_sidebar(array(
-    'name'          => __('Front Page', 'roots'),
-    'id'            => 'sidebar-front',
-    'before_widget' => '<article class="widget %1$s %2$s">',
-    'after_widget'  => '</article>',
-    'before_title'  => '<div class="page-header"><h2>',
-    'after_title'   => '</h2></div>',
-  ));
+	register_sidebar(array(
+		'name'          => __('Front Left', 'roots'),
+		'id'            => 'sidebar-home-left',
+		'before_widget' => '<article class="widget %1$s %2$s">',
+		'after_widget'  => '</article>',
+		'before_title'  => '<div class="page-header"><h2>',
+		'after_title'   => '</h2></div>',
+	));
+	register_sidebar(array(
+		'name'          => __('Front Right', 'roots'),
+		'id'            => 'sidebar-home-right',
+		'before_widget' => '<article class="widget %1$s %2$s">',
+		'after_widget'  => '</article>',
+		'before_title'  => '<div class="page-header"><h2>',
+		'after_title'   => '</h2></div>',
+	));
   register_sidebar(array(
     'name'          => __('Footer 1', 'roots'),
     'id'            => 'sidebar-footer-left',
