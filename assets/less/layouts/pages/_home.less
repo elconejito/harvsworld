@@ -14,6 +14,13 @@
       background-color: @gray-dark;
       color: lighten(@brand-primary, 20%);
     }
+    .thumbnail {
+      background-color: @gray-dark;
+      border-color: @gray;
+      .caption {
+        color: @gray-lighter;
+      }
+    }
   }
   &.light {
     background-color: #ffffff;
@@ -44,5 +51,16 @@
     color: @gray-lighter;
     text-shadow: 0 4px 8px @gray-dark;
     margin-top: 20%;
+  }
+  .down {
+    position: absolute;
+    bottom: 5%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: @gray-lighter;
+    i {
+      font-size: (@font-size-h1 * 2);
+    }
   }
 }
