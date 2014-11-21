@@ -10,13 +10,7 @@
   
   <?php get_template_part('templates/content-front-profile'); ?>
   
-  <?php get_template_part('templates/content-front-social'); ?>
-  
-  <div id="social" class="para-section">
-    <div class="container">
-      <h1>social</h1>
-    </div>
-  </div>
+  <?php get_template_part('templates/content-front-posts'); ?>
 
   <?php get_template_part('templates/footer'); ?>
 
