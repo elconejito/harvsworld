@@ -202,8 +202,8 @@ function hw_bootstrap_gallery($attr) {
     $controlsEnd = '';
 
     // Build next/prev buttons
-    $prev = '<a class="left carousel-control" href="#'.$targetID.'" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>';
-    $next = '<a class="right carousel-control" href="#'.$targetID.'" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>';
+    $prev = '<a class="left carousel-control" href="#'.$targetID.'" role="button" data-slide="prev"><i class="fa fa-chevron-left"></i></a>';
+    $next = '<a class="right carousel-control" href="#'.$targetID.'" role="button" data-slide="next"><i class="fa fa-chevron-right"></i></a>';
 
     $i = 0;
     $slides = '';
