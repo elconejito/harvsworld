@@ -148,7 +148,6 @@ function hw_init_widgets() {
 }
 add_action( 'widgets_init', 'hw_init_widgets');
 
-
 /**
  * Bug testing only. Not to be used on a production site!!
  */
