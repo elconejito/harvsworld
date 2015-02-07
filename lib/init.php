@@ -96,5 +96,5 @@ add_action( 'widgets_init', 'roots_widgets_init' );
 require 'theme-update.php';
 $update_checker = new ThemeUpdateChecker(
 	'harvsworld',
-	'http://dev.littlerabbitstudios.com/api/update/harvsworld/version'
+	'http://littlerabbitstudios.com/api/update/harvsworld/version'
 );
