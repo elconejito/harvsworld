@@ -170,6 +170,7 @@ module.exports = function (grunt) {
 							'!*.json',
 							'!*.js',
 							'!Gruntfile.js',
+							'!dist/**',
 							'!node_modules/**',
 							'!assets/js/_*.js',
 							'!assets/less/**',
