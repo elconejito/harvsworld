@@ -1,4 +1,5 @@
 ### HEAD
+* Update asset-builder 1.0.1 to fix Windows compatibility
 * Fixes broken wiredep imports with main.scss.example ([original issue](https://discourse.roots.io/t/issue-with-sage-sass-version/2962))
 * Change theme name from Roots to Sage
 * Bump required PHP version to >=5.4

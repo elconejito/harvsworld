@@ -41,12 +41,7 @@
         "./js/popover.js",
         "./js/scrollspy.js",
         "./js/tab.js",
-        "./js/affix.js",
-        "./fonts/glyphicons-halflings-regular.eot",
-        "./fonts/glyphicons-halflings-regular.svg",
-        "./fonts/glyphicons-halflings-regular.ttf",
-        "./fonts/glyphicons-halflings-regular.woff",
-        "./fonts/glyphicons-halflings-regular.woff2"
+        "./js/affix.js"
       ]
     },
     "bootstrap-sass-official": {
@@ -63,12 +58,7 @@
         "./assets/javascripts/bootstrap/popover.js",
         "./assets/javascripts/bootstrap/scrollspy.js",
         "./assets/javascripts/bootstrap/tab.js",
-        "./assets/javascripts/bootstrap/affix.js",
-        "./assets/fonts/bootstrap/glyphicons-halflings-regular.eot",
-        "./assets/fonts/bootstrap/glyphicons-halflings-regular.svg",
-        "./assets/fonts/bootstrap/glyphicons-halflings-regular.ttf",
-        "./assets/fonts/bootstrap/glyphicons-halflings-regular.woff",
-        "./assets/fonts/bootstrap/glyphicons-halflings-regular.woff2"
+        "./assets/javascripts/bootstrap/affix.js"
       ]
     }
   }
