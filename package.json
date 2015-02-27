@@ -1,15 +1,12 @@
 {
-  "name": "sage",
-  "version": "8.0.0",
-  "author": "Ben Word <ben@benword.com>",
-  "homepage": "https://roots.io/sage/",
+  "name": "harvsworld",
+  "version": "2.0.0",
+  "author": "Harvey Ramos <harvey@harvsworld.com>",
+  "homepage": "https://harvsworld.com/",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git://github.com/roots/sage.git"
-  },
-  "bugs": {
-    "url": "https://github.com/roots/sage/issues"
+    "url": "git@bitbucket.org:harveyramos/harvsworld.git"
   },
   "licenses": [
     {

@@ -1,6 +1,63 @@
-// Grid settings
+// Brand colors
+// -------------------------
+// https://kuler.adobe.com/cold-blue-grey-orange-color-theme-495839/edit/?copy=true&base=2&rule=Custom&selected=3&name=Copy%20of%20cold%20blue%20grey%20orange&mode=rgb&rgbvalues=0.7176470588235294,0.8,0.8784313725490196,0.1843137254901961,0.27058823529411763,0.3568627450980392,0.44313725490196076,0.6549019607843137,0.8549019607843137,0.2901960784313726,0.3254901960784314,0.3568627450980392,0.9411764705882353,0.47843137254901963,0.17647058823529413&swatchOrder=0,1,2,3,4
+@brand-primary:     #2F455B;    // blue
+@brand-secondary:   #F07A2D;    // orange
+@brand-tertiary:    #4A535B;    // blue-grey
+@link-color:        lighten(@brand-primary, 20%);
+
+//** Background color for `<body>`.
+@body-bg:           @gray-darker;
+
+// BlockQuote Colors
+// -------------------------
+@blockquote-border-color: #dddddd;
+
+// Navbar Colors
+// -------------------------
+@navbar-default-color:              @gray-lighter;
+@navbar-default-bg:                 @brand-primary;
+
+@navbar-default-link-color:         @gray-lighter;
+@navbar-default-link-hover-color:   @brand-secondary;
+@navbar-default-link-hover-bg:      darken(@navbar-default-bg, 6.5%);
+@navbar-default-link-active-color:  #ffffff;
+@navbar-default-link-active-bg:     @navbar-default-bg;
+
+@navbar-margin-bottom:             0;
+
+// Fonts
+// -------------------------
+@font-family-sans-serif:        "Open Sans", Arial, sans-serif;
+@headings-font-family:          'Oswald', serif;
+
+@font-size-base:                16px;
+@line-height-base:              1.6;
+
+@headings-color:                 @brand-primary;
+@headings-font-weight:    400;
+
+// Glyphicons path
+// -------------------------
+@icon-font-path:      "../fonts";
+@fa-font-path:        "../fonts";
+
 @main-sm-columns:       @grid-columns;
 @sidebar-sm-columns:    4;
 
-// Colors
-@brand-primary:         #27ae60;
+//== Thumbnails
+// -------------------------
+
+//** Thumbnail background color
+@thumbnail-bg:                @gray-lighter;
+//** Thumbnail border color
+@thumbnail-border:            #ddd;
+
+//** Custom text color for thumbnail captions
+@thumbnail-caption-color:     @text-color;
+
+//== Jumbotron
+// -------------------------
+@jumbotron-color:                @gray-lighter;
+@jumbotron-bg:                   #000;
+@jumbotron-heading-color:        @brand-secondary;
