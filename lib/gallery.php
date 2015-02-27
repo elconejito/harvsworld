@@ -130,3 +130,19 @@ function attachment_link_class($html) {
   return $html;
 }
 add_filter('wp_get_attachment_link', __NAMESPACE__ . '\\attachment_link_class', 10, 1);
+
+function hw_header_featured_background() {
+	if ( '' != get_the_post_thumbnail() && is_single() ) {
+		$image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' );
+		echo 'class="jumbotron jumbo-image" style="background-image: url('.$image_url[0].');" ';
+	} else {
+		echo 'class="jumbotron" ';
+	}
+}
+
+function hw_home_featured_background() {
+	if ( '' != get_the_post_thumbnail() && is_front_page() ) {
+		$image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' );
+		echo ' style="background-image: url('.$image_url[0].');" ';
+	}
+}

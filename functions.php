@@ -19,6 +19,7 @@ $sage_includes = [
   'lib/titles.php',                // Page titles
   'lib/nav.php',                   // Custom nav modifications
   'lib/gallery.php',               // Custom [gallery] modifications
+  'lib/content.php',               // Custom functions based around content
   'lib/extras.php',                // Custom functions
 ];
 
