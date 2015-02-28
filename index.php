@@ -6,7 +6,16 @@
 <?php endif; ?>
 
 <?php while (have_posts()) : the_post(); ?>
-  <?php get_template_part('templates/content', get_post_type() != 'post' ? get_post_type() : get_post_format()); ?>
+  <?php
+	$contentType = 'list';
+	if ( get_post_type() != 'post' ) {
+		$contentType = get_post_type();
+	} elseif ( get_post_format() != '' ) {
+		$contentType = get_post_format();
+	}
+	echo get_post_format();
+	get_template_part('templates/content',  $contentType);
+	?>
 <?php endwhile; ?>
 
 <?php the_posts_navigation(); ?>
