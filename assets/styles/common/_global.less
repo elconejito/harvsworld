@@ -1,0 +1,64 @@
+html, body {
+	height: 100%;
+}
+body {
+	/*padding-top: 50px;*/
+}
+a {
+	color: @link-color;
+	text-decoration: none;
+
+	&:hover,
+	&:focus {
+		color: @link-hover-color;
+		text-decoration: none;
+	}
+
+	&:focus {
+		.tab-focus();
+	}
+}
+
+// Jumbotron
+// -------------------------
+.jumbotron {
+	margin-bottom: 0;
+	.page-header {
+		border-bottom: none;
+		h1, p {
+			background-color: #000;
+			padding: 5px 10px;
+		}
+		p {
+			display: inline;
+		}
+		.entry-meta {
+			color: @gray-light;
+		}
+	}
+	&.jumbo-image {
+		padding-top: 180px;
+		padding-bottom: 150px;
+		background: @jumbotron-bg no-repeat center center fixed;
+		background-size: cover;
+	}
+}
+
+blockquote {
+	font-family: @headings-font-family;
+	font-weight: 300;
+	color: @gray-light;
+	padding-right: (@line-height-computed * 5);
+	margin-left: @line-height-computed;
+	border-left: 20px solid @blockquote-border-color;
+	ul,
+	ol {
+		text-align: left;
+	}
+	@media (max-width: @screen-md-min) {
+		padding-right: (@line-height-computed / 2);
+		padding-left: (@line-height-computed / 2);
+		margin-left: 0;
+		border-left: 10px solid @blockquote-border-color;
+	}
+}
