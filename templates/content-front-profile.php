@@ -68,7 +68,7 @@
 			</div>
 			<div class="col-md-7">
 				<div class="thumbnail">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/harvey.png" class="img-responsive">
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/images/harvey.png" class="img-responsive">
 					<div class="caption">
 						<p>On the left I'm comfortable in my native habitat. But I've been told I clean up real nice too.</p>
 					</div>
