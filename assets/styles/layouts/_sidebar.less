@@ -1,7 +1,39 @@
 .sidebar {
-	padding-top: 40px;
+	padding-top: 15px;
 	.make-sm-column(@sidebar-sm-columns);
 }
+
+.widget {
+	margin-bottom: 80px;
+	ul {
+		.list-group;
+		li {
+			.list-group-item;
+		}
+	}
+	table {
+		.table;
+	}
+	.really_simple_twitter_widget {
+		li {
+			img {
+				.pull-right;
+				margin-left: 5px;
+				border: 1px solid #ffffff;
+			}
+			.twitter-timestamp {
+				display: block;
+				a {
+					color: @gray-light;
+					&:hover {
+						color: lighten(@gray-light, 10%);
+					}
+				}
+			}
+		}
+	}
+}
+/*
 .widget .really_simple_twitter_widget {
 	.list-group;
 	li {
@@ -66,4 +98,4 @@
 	h1, h2, h3, h4, h5, h6 {
 		color: @gray-lighter;
 	}
-}
+}*/

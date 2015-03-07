@@ -21,9 +21,6 @@ use Roots\Sage\Wrapper;
 
     <?php get_template_part('templates/content-front-posts'); ?>
 
-    <?php
-      get_template_part('templates/footer');
-      wp_footer();
-    ?>
+    <?php get_template_part('templates/footer'); ?>
   </body>
 </html>

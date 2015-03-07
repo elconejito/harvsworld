@@ -26,9 +26,6 @@ use Roots\Sage\Wrapper;
         <?php endif; ?>
       </div><!-- /.content -->
     </div><!-- /.wrap -->
-    <?php
-      get_template_part('templates/footer');
-      wp_footer();
-    ?>
+    <?php get_template_part('templates/footer'); ?>
   </body>
 </html>

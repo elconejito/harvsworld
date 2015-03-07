@@ -23,6 +23,7 @@ a {
 // -------------------------
 .jumbotron {
 	margin-bottom: 0;
+	box-shadow: inset 0 -20px 20px -14px rgba(0,0,0,0.7);
 	.page-header {
 		border: none;
 		h1, p {
@@ -38,18 +39,26 @@ a {
 	}
 }
 
+.wrap {
+}
+
+.content {
+	background-color: #f0f0f0;
+}
 article {
 	margin-bottom: (@line-height-computed * 3);
 	img {
 		max-width: 100%;
 	}
-	header {
-		border-bottom: 1px solid #dddddd;
-		margin-bottom: 10px;
-		.entry-meta {
-			font-size: @font-size-small;
-			color: @gray-light;
-		}
+}
+
+article header,
+section header {
+	border-bottom: 1px solid #dddddd;
+	margin-bottom: 10px;
+	.entry-meta {
+		font-size: @font-size-small;
+		color: @gray-light;
 	}
 }
 
@@ -69,5 +78,18 @@ blockquote {
 		padding-left: (@line-height-computed / 2);
 		margin-left: 0;
 		border-left: 10px solid @blockquote-border-color;
+	}
+}
+
+.list-group-item {
+	background-color: transparent;
+	border-left: none;
+	border-right: none;
+	// remove first child's top border
+	&:first-child {
+		border-top: none;
+	}
+	&:last-child {
+		border-bottom: none;
 	}
 }

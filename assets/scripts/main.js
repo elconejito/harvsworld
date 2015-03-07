@@ -23,6 +23,7 @@
     'common': {
       init: function() {
         // JavaScript to be fired on all pages
+        $(".content").fitVids();
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
