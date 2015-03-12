@@ -6,6 +6,19 @@ var browserSync = require('browser-sync');
 var gulp        = require('gulp');
 var lazypipe    = require('lazypipe');
 var merge       = require('merge-stream');
+var zip         = require('gulp-zip');
+var pkg         = require('./package.json');
+
+var zipDirs = [
+    '*.*',
+    'dist/**',
+    'lang/**',
+    'lib/**',
+    'templates/**',
+    '!bower.json',
+    '!Gulpfile.js',
+    '!package.json'
+];
 
 // See https://github.com/austinpray/asset-builder
 var manifest = require('asset-builder')('./assets/manifest.json');
@@ -249,6 +262,19 @@ gulp.task('wiredep', function() {
       hasChanged: $.changed.compareSha1Digest
     }))
     .pipe(gulp.dest(path.source + 'styles'));
+});
+
+/**
+ * Creates a zip file to distribute the stage extension
+ *
+ * base option of gulp.src uses '../' to go up one level so the packaged zip has the folder name inside the zip
+ * per WordPress theme zip requirements.
+ */
+gulp.task('zip', function() {
+    return gulp.src(zipDirs, { base: "../" })
+        .pipe(zip(pkg.name + '-' + pkg.version + '.zip'))
+        .pipe(gulp.dest('./build'));
+ 
 });
 
 // ### Gulp
