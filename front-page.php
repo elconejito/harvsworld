@@ -1,7 +1,4 @@
-<?php
-// $latestPosts = hw_latest_posts();
-
-$frontPagePosts = hw_home_posts();
-
-include(locate_template('templates/content-front.php'));
-?>
+<?php while (have_posts()) : the_post(); ?>
+  <?php get_template_part('templates/page', 'header'); ?>
+  <?php get_template_part('templates/content', 'page'); ?>
+<?php endwhile; ?>
