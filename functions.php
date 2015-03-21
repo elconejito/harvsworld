@@ -11,6 +11,7 @@
  */
 $sage_includes = [
   'lib/utils.php',                 // Utility functions
+  'lib/theme-update.php',          // Theme Update class
   'lib/init.php',                  // Initial theme setup and constants
   'lib/wrapper.php',               // Theme wrapper class
   'lib/conditional-tag-check.php', // ConditionalTagCheck class

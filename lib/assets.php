@@ -164,7 +164,7 @@ function google_analytics() {
         }
       }
     <?php endif; ?>
-    ga('create','<?= GOOGLE_ANALYTICS_ID; ?>','auto');ga('send','pageview');
+    ga('create','<?= GOOGLE_ANALYTICS_ID; ?>','auto',{'siteSpeedSampleRate': 100});ga('require', 'displayfeatures');ga('send','pageview');
   </script>
   <?php
 }

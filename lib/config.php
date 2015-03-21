@@ -7,9 +7,9 @@ use Roots\Sage;
 /**
  * Enable theme features
  */
-add_theme_support('soil-clean-up');         // Enable clean up from Soil
-add_theme_support('soil-relative-urls');    // Enable relative URLs from Soil
-add_theme_support('soil-nice-search');      // Enable nice search from Soil
+// add_theme_support('soil-clean-up');         // Enable clean up from Soil
+// add_theme_support('soil-relative-urls');    // Enable relative URLs from Soil
+// add_theme_support('soil-nice-search');      // Enable nice search from Soil
 add_theme_support('bootstrap-gallery');     // Enable Bootstrap's thumbnails component on [gallery]
 add_theme_support('jquery-cdn');            // Enable to load jQuery from the Google CDN
 

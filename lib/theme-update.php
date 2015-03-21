@@ -1,4 +1,7 @@
 <?php
+
+namespace Roots\Sage\Update;
+
 /**
  * Theme Update Checker Library 1.2
  * http://w-shadow.com/blog/2011/06/02/automatic-updates-for-commercial-themes/
@@ -8,7 +11,6 @@
  * http://www.gnu.org/licenses/gpl.html
  */
 
-if ( !class_exists('ThemeUpdateChecker') ):
 
 	/**
 	 * A custom theme update checker.
@@ -238,9 +240,6 @@ if ( !class_exists('ThemeUpdateChecker') ):
 		}
 	}
 
-endif;
-
-if ( !class_exists('ThemeUpdate') ):
 
 	/**
 	 * A simple container class for holding information about an available update.
@@ -299,5 +298,3 @@ if ( !class_exists('ThemeUpdate') ):
 			return $update;
 		}
 	}
-
-endif;
