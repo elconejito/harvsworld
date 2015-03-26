@@ -140,7 +140,7 @@ namespace Roots\Sage\Update;
 		public function checkForUpdates(){
 			$state = get_option($this->optionName);
 			if ( empty($state) ){
-				$state = new StdClass;
+				$state = new \StdClass;
 				$state->lastCheck = 0;
 				$state->checkedVersion = '';
 				$state->update = null;
