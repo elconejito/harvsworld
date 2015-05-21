@@ -98,12 +98,3 @@ function widgets_init() {
 }
 
 add_action( 'widgets_init', __NAMESPACE__ . '\\widgets_init' );
-
-/*
- * Add custom update function
- */
-//Initialize the update checker.
-$update_checker = new Update\ThemeUpdateChecker(
-	'harvsworld',
-	'http://littlerabbitstudios.com/api/update/harvsworld/version'
-);

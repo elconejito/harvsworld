@@ -11,7 +11,6 @@
  */
 $sage_includes = [
   'lib/utils.php',                 // Utility functions
-  'lib/theme-update.php',          // Theme Update class
   'lib/init.php',                  // Initial theme setup and constants
   'lib/wrapper.php',               // Theme wrapper class
   'lib/conditional-tag-check.php', // ConditionalTagCheck class
@@ -22,6 +21,7 @@ $sage_includes = [
   'lib/gallery.php',               // Custom [gallery] modifications
   'lib/content.php',               // Custom functions based around content
   'lib/extras.php',                // Custom functions
+  'lib/update.php',                // EDD Theme Update
 ];
 
 foreach ($sage_includes as $file) {

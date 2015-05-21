@@ -28,6 +28,31 @@ if (!defined('WP_ENV')) {
 }
 
 /**
+ * Define values for EDD theme update
+ * Prefix is EDD_TU for Easy Digital Downloads Theme Update
+ */
+if (!defined('EDD_TU_REMOTE_API_URL'))
+    define('EDD_TU_REMOTE_API_URL', 'http://littlerabbitstudios.com');
+
+if (!defined('EDD_TU_ITEM_NAME'))
+    define('EDD_TU_ITEM_NAME', 'HarvsWorld Theme');
+
+if (!defined('EDD_TU_THEME_SLUG'))
+    define('EDD_TU_THEME_SLUG', 'harvsworld');
+
+if (!defined('EDD_TU_VERSION'))
+    define('EDD_TU_VERSION', '2.1.0');
+
+if (!defined('EDD_TU_AUTHOR'))
+    define('EDD_TU_AUTHOR', 'Harvey Ramos');
+
+if (!defined('EDD_TU_DOWNLOAD_ID'))
+    define('EDD_TU_DOWNLOAD_ID', '');
+
+if (!defined('EDD_TU_RENEW_URL'))
+    define('EDD_TU_RENEW_URL', '');
+
+/**
  * Define which pages shouldn't have the sidebar
  */
 function display_sidebar() {

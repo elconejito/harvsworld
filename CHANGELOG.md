@@ -1,4 +1,9 @@
 ### HEAD
+
+### 2.1.0
+* Added Easy Digital Downloads Theme Updater
+
+### 2.0.1
 * Update asset-builder 1.0.1 to fix Windows compatibility
 * Fixes broken wiredep imports with main.scss.example ([original issue](https://discourse.roots.io/t/issue-with-sage-sass-version/2962))
 * Change theme name from Roots to Sage
