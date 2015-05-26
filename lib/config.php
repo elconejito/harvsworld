@@ -32,16 +32,16 @@ if (!defined('WP_ENV')) {
  * Prefix is EDD_TU for Easy Digital Downloads Theme Update
  */
 if (!defined('EDD_TU_REMOTE_API_URL'))
-    define('EDD_TU_REMOTE_API_URL', 'http://littlerabbitstudios.com');
+    define('EDD_TU_REMOTE_API_URL', 'https://littlerabbitstudios.com');
 
 if (!defined('EDD_TU_ITEM_NAME'))
-    define('EDD_TU_ITEM_NAME', 'HarvsWorld Theme');
+    define('EDD_TU_ITEM_NAME', 'HarvsWorld');
 
 if (!defined('EDD_TU_THEME_SLUG'))
     define('EDD_TU_THEME_SLUG', 'harvsworld');
 
 if (!defined('EDD_TU_VERSION'))
-    define('EDD_TU_VERSION', '2.1.0');
+    define('EDD_TU_VERSION', '2.1.2');
 
 if (!defined('EDD_TU_AUTHOR'))
     define('EDD_TU_AUTHOR', 'Harvey Ramos');

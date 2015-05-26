@@ -1,5 +1,8 @@
 ### HEAD
 
+### 2.1.2
+* Updated cover image
+
 ### 2.1.0
 * Added Easy Digital Downloads Theme Updater
 
