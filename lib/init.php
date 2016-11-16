@@ -39,6 +39,19 @@ function setup() {
 
 	// Tell the TinyMCE editor to use a custom stylesheet
 	add_editor_style( Assets\asset_path( 'styles/editor-style.css' ) );
+	
+	/**
+     * Add Custom Image Sizes
+	 *
+	 * True/False at the end of the function determines whether the image is scaled to fit (false) or cropped (true). True
+	 * may also be substituted for an array with crop position, see docs for mre detail. If you change these sizes after
+	 * uploading images use the Regenerate Thumbnails plugin (by Viper007Bond) to create new sizes.
+	 *
+	 * @link https://developer.wordpress.org/reference/functions/add_image_size/
+	 *
+     */
+    add_image_size('featured', 540, 300, true);
+    add_image_size('portfolio', 540, 350, true);
 }
 
 add_action( 'after_setup_theme', __NAMESPACE__ . '\\setup' );
